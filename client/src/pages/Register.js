@@ -1,10 +1,20 @@
-import { Form } from 'antd';
+import { Form, message } from 'antd';
 import { Link } from 'react-router-dom';
+import { RegisterUser } from './apis/authentication';
 
 export const Register = () => {
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
+    const onFinish = async (values) => {
+        try {
+            const response = await RegisterUser(values);
+            if (response.success) {
+                message.success(response.message);
+            } else {
+                message.error(response.message);
+            }
+        } catch (error) {
+            message.error(error.message);
+        }
     }
 
     return (

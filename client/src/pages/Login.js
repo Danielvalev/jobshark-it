@@ -1,19 +1,36 @@
 import { Form, message } from 'antd';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { HideLoading, ShowLoading } from '../redux/alertSlice';
 import { LoginUser } from './apis/authentication';
 
 export const Login = () => {
 
+    const nav = useNavigate();
+
+    const dispatch = useDispatch();
+
     const onFinish = async (values) => {
         try {
+            dispatch(ShowLoading());
             const response = await LoginUser(values);
+            dispatch(HideLoading());
             if (response.success) {
                 message.success(response.message);
+                
+                // save info in localstorage
+                localStorage.setItem('user', JSON.stringify(response.data));
+
+                // navigate to list page if success
+                nav("/list");
+
             } else {
                 message.error(response.message);
             }
         } catch (error) {
+            dispatch(ShowLoading());
             message.error(error.message);
+            dispatch(HideLoading());
         }
     }
 

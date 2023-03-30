@@ -1,19 +1,33 @@
 import { Form, message } from 'antd';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { HideLoading, ShowLoading } from '../redux/alertSlice';
 import { RegisterUser } from './apis/authentication';
 
 export const Register = () => {
+    const nav = useNavigate();
+    const dispatch = useDispatch();
 
     const onFinish = async (values) => {
         try {
+            dispatch(ShowLoading());
+
             const response = await RegisterUser(values);
+
+            dispatch(HideLoading());
+
             if (response.success) {
                 message.success(response.message);
+                nav('/login');
             } else {
                 message.error(response.message);
             }
         } catch (error) {
+            dispatch(ShowLoading());
+
             message.error(error.message);
+
+            dispatch(HideLoading());
         }
     }
 

@@ -1,0 +1,14 @@
+.loader-parent {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(31, 31, 31, 0.685);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
+
+.spinner-border {
+    height: 75px;
+    width: 75px;
+}

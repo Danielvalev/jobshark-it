@@ -6,7 +6,7 @@ import { LoginUser } from './apis/authentication';
 
 export const Login = () => {
 
-    const nav = useNavigate();
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
 
@@ -21,8 +21,8 @@ export const Login = () => {
                 // save info in localstorage
                 localStorage.setItem('user', JSON.stringify(response.data));
 
-                // navigate to list page if success
-                nav("/list");
+                // navigate to dashboard page if success
+                navigate("/dashboard");
 
             } else {
                 message.error(response.message);

@@ -10,7 +10,7 @@
   background-color: white;
 }
 
-input {
+input, select, textarea {
   border: 1px solid gray !important;
   height: 40px !important;
   width: 100% !important;
@@ -41,4 +41,9 @@ a {
 .divider {
   border-bottom: 1px solid gray;
   margin: 20px 0;
+}
+
+textarea {
+  min-height: 60px !important;
+  max-height: 1000px !important;
 }

@@ -49,7 +49,7 @@ function Experince() {
                     <input type="text" />
                   </Form.Item>
                 </Col>
-                <i class="ri-delete-bin-line" onClick={() => remove(name)}></i>
+                <i className="ri-delete-bin-line" onClick={() => remove(name)}></i>
               </Row>
             ))}
             <Form.Item>

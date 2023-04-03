@@ -1,4 +1,4 @@
-import { updateDoc, doc, getDoc } from 'firebase/firestore';
+import { updateDoc, doc, getDoc, getDocs, collection } from 'firebase/firestore';
 import { fireDB } from '../../firebaseConfig';
 
 export const updateUserProfile = async (payload) => {
@@ -45,3 +45,24 @@ export const getUserProfile = async (id) => {
       };
     }
   };
+
+
+export const getAllUsers = async () => {
+    try {
+      const users = [];
+      const querySnapshot = await getDocs(collection(fireDB, "users"));
+      querySnapshot.forEach((doc) => {
+        users.push({ id: doc.id, ...doc.data() });
+      });
+      return {
+        success: true,
+        data: users,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        message: "Something went wrong",
+      };
+    }
+  };
+  

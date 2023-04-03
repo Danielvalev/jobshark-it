@@ -12,6 +12,9 @@ import AppliedJobs from './pages/user/AppliedJobs';
 import Profile from './pages/user/profile';
 import PostedJobs from './pages/user/postedjobs';
 import NewEditJob from './pages/user/postedjobs/NewEditJob';
+import AllJobs from './pages/admin/AllJobs';
+import AllUsers from './pages/admin/AllUsers';
+import JobView from './pages/JobView';
 
 
 function App() {
@@ -31,8 +34,10 @@ function App() {
           <Route path='/posted-jobs/new' element={<ProtectedRoute><NewEditJob /></ProtectedRoute>}/>
           <Route path='/posted-jobs/edit/:id' element={<ProtectedRoute><NewEditJob /></ProtectedRoute>}/>
 
+          <Route path='/posted-job/:id' element={<ProtectedRoute><JobView /></ProtectedRoute>}/>
 
-
+          <Route path='/admin/jobs' element={<ProtectedRoute><AllJobs /></ProtectedRoute>}/>
+          <Route path='/admin/users' element={<ProtectedRoute><AllUsers /></ProtectedRoute>}/>
 
 
         </Routes>

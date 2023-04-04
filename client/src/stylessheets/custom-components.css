@@ -51,3 +51,9 @@
   border-radius: 5px;
   text-align: center;
 }
+
+.link-title {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}

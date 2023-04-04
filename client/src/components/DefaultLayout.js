@@ -19,22 +19,22 @@ function DefaultLayout({children}) {
         {
             title: 'Dashboard',
             onClick: () => navigate('/dashboard'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-home-2-line"></i>,
         },
         {
             title: "Applied jobs",
             onClick: () => navigate('/applied-jobs'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-file-upload-line"></i>,
         },
         {
             title: "Posted jobs",
             onClick: () => navigate('/posted-jobs'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-file-add-line"></i>,
         },
         {
             title: "Profile",
             onClick: () => navigate('/profile'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-user-line"></i>,
         },
         {
             title: "Logout",
@@ -42,7 +42,7 @@ function DefaultLayout({children}) {
                 localStorage.removeItem("user");
                 navigate("/login");
               },
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-logout-box-line"></i>,
         },
     ]
 
@@ -50,17 +50,17 @@ function DefaultLayout({children}) {
         {
             title: 'Dashboard',
             onClick: () => navigate('/dashboard'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-home-2-line"></i>,
         },
         {
             title: "Jobs",
             onClick: () => navigate('/admin/jobs'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-pages-line"></i>,
         },
         {
             title: "Users",
             onClick: () => navigate('/admin/users'),
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-team-fill"></i>,
         },
         {
             title: "Logout",
@@ -68,7 +68,7 @@ function DefaultLayout({children}) {
                 localStorage.removeItem("user");
                 navigate("/login");
               },
-            icon: <i className="ri-file-list-line"></i>,
+            icon: <i className="ri-logout-box-line"></i>,
         },
     ];
 

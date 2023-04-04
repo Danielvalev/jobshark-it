@@ -15,6 +15,8 @@ import NewEditJob from './pages/user/postedjobs/NewEditJob';
 import AllJobs from './pages/admin/AllJobs';
 import AllUsers from './pages/admin/AllUsers';
 import JobView from './pages/JobView';
+import Home from './pages/Home';
+import JobPublicView from './pages/JobPublicView';
 
 
 function App() {
@@ -24,9 +26,11 @@ function App() {
       {loading && <Loader />}
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<PublicRoute><Home /></PublicRoute>}/>
+          <Route path='/job/:id' element={<PublicRoute><JobPublicView /></PublicRoute>}/>
           <Route path='/register' element={<PublicRoute><Register /></PublicRoute>}/>
           <Route path='/login' element={<PublicRoute><Login /></PublicRoute>}/>
-
+          
           <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>}/>
           <Route path='/applied-jobs' element={<ProtectedRoute><AppliedJobs /></ProtectedRoute>}/>
           <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>}/>

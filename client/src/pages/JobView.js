@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { HideLoading, ShowLoading } from "../redux/alertSlice";
 import { Col, Row, message } from "antd";
-import { applyJob, getApplicationsByJobId, getJobById } from "./apis/jobs";
+import { applyJob, getApplicationsByJobId, getJobById } from "../apis/jobService";
 import PageTitle from "../components/PageTitle";
 
 

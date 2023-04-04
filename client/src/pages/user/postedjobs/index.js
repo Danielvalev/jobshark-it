@@ -3,7 +3,7 @@ import PageTitle from "../../../components/PageTitle";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../../redux/alertSlice";
-import { deleteJobById, getPostedJobsByUserId } from "../../apis/jobs";
+import { deleteJobById, getPostedJobsByUserId } from "../../../apis/jobService";
 import { Table, message } from "antd";
 
 function PostedJobs() {

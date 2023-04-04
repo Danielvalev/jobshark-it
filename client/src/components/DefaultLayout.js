@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUserProfile } from "../pages/apis/users";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../redux/alertSlice";
+import { getUserProfile } from "../apis/userService";
 
 function DefaultLayout({children}) {
     const user = JSON.parse(localStorage.getItem('user'));

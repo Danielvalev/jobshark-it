@@ -1,5 +1,5 @@
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from "firebase/firestore";
-import { fireDB } from "../../firebaseConfig";
+import { fireDB } from "../firebaseConfig";
 import moment from 'moment';
 
 export const addNewJobPost = async (payload) => {

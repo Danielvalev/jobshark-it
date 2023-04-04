@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { HideLoading, ShowLoading } from "../redux/alertSlice";
-import { getAllJobs } from "./apis/jobs";
+import { getAllJobs } from "../apis/jobService";
 import { Col, Row, message } from "antd";
 import PageTitle from "../components/PageTitle";
 

@@ -5,7 +5,7 @@ import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
 import Experience from "./Experience";
 import {useDispatch} from "react-redux";
-import { getUserProfile, updateUserProfile } from "../../apis/users";
+import { getUserProfile, updateUserProfile } from "../../../apis/userService";
 import { HideLoading, ShowLoading } from '../../../redux/alertSlice';
 
 const { TabPane } = Tabs;

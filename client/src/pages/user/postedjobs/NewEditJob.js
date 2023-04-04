@@ -4,7 +4,7 @@ import PageTitle from "../../../components/PageTitle";
 import { Form, Row, Col, message } from "antd";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../../redux/alertSlice";
-import { addNewJobPost, editJob, getJobById } from "../../apis/jobs";
+import { addNewJobPost, editJob, getJobById } from "../../../apis/jobService";
 
 function NewEditJob() {
   const params = useParams();

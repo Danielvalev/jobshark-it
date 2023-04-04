@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../redux/alertSlice";
-import { deleteJobById, editJob, getAllJobs } from "../apis/jobs";
+import { deleteJobById, editJob, getAllJobs } from "../../apis/jobService";
 import { Table, message } from "antd";
 import PageTitle from "../../components/PageTitle";
 

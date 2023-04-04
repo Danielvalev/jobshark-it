@@ -2,7 +2,7 @@ import { Form, message } from 'antd';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { HideLoading, ShowLoading } from '../redux/alertSlice';
-import { RegisterUser } from './apis/authentication';
+import { RegisterUser } from '../apis/authService';
 
 export const Register = () => {
     const nav = useNavigate();

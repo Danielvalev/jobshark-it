@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { HideLoading, ShowLoading } from "../redux/alertSlice";
-import { getJobById } from "./apis/jobs";
+import { getJobById } from "../apis/jobService";
 import { Col, Row, message } from "antd";
 import PageTitle from "../components/PageTitle";
 

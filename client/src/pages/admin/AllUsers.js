@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../redux/alertSlice";
 import { Table, message } from "antd";
 import PageTitle from "../../components/PageTitle";
-import { getAllUsers, updateUserProfile } from "../apis/users";
+import { getAllUsers, updateUserProfile } from "../../apis/userService";
 
 function AllUsers() {
 

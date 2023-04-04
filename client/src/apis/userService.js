@@ -1,5 +1,5 @@
 import { updateDoc, doc, getDoc, getDocs, collection } from 'firebase/firestore';
-import { fireDB } from '../../firebaseConfig';
+import { fireDB } from '../firebaseConfig';
 
 export const updateUserProfile = async (payload) => {
     const user = JSON.parse(localStorage.getItem('user'));

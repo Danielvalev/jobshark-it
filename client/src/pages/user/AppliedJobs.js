@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PageTitle from "../../components/PageTitle";
 import { useDispatch } from "react-redux";
 import { HideLoading, ShowLoading } from "../../redux/alertSlice";
-import { getApplicationsByUserId } from "../apis/jobs";
+import { getApplicationsByUserId } from "../../apis/jobService";
 import { Table, message } from "antd";
 
 function AppliedJobs() {

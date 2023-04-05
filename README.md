@@ -4,7 +4,9 @@
   <p align="center">
     React project for sharing and searching for the best IT jobs. There are two layers of access. As a User and as an Administrator (who approves the newly posted jobs)
     <br />
+    <br />
     Deployed with Netlify: https://jobshark.netlify.app/
+    <br />
     <br />
     <a href="https://jobshark.netlify.app/">View Demo</a>
     ·
